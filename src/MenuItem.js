@@ -51,6 +51,7 @@ export default class MenuItem extends Component {
 
         const { disabled, divider, onClick, data, preventClose, trackSelection } = this.props;
 
+        if (disabled || divider) return;
         if (trackSelection) this.setItem();
 
         if (disabled || divider) return;
@@ -68,9 +69,9 @@ export default class MenuItem extends Component {
     }
 
     renderSelectedDot = () => {
-        const menuItemActiveClass = cx(cssClasses.menuItemActive);
+        const trackedItemClass = cx(cssClasses.trackedItem);
         return (
-            <span className={menuItemActiveClass} >&#8226;</span>
+            <span className={trackedItemClass} >&#8226;</span>
         );
     }
 

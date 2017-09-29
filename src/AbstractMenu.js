@@ -23,9 +23,7 @@ export default class AbstractMenu extends Component {
         this.setState({ activeItem });
     }
 
-    checkActive = (index) => {
-        return this.state.activeItem === index;
-    }
+    checkActive = index => this.state.activeItem === index;
 
     handleKeyNavigation = (e) => {
         // check for isVisible strictly here as it might be undefined when this code executes in the context of SubMenu

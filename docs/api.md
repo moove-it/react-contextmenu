@@ -52,6 +52,7 @@ A Simple Component for menu items.
 | index | Number  |           |  `0 `    | Index for tracking the selected value  |
 | trackSelection | boolean  |           |  `false`    | If `true` allows the traking of selected values  |
 | defaultSelected | boolean  |           |  `false`    | If `true` set the default selection  |
+| isActive    | boolean   |           | `false` | **Internal Prop**: will set the style for the tracked item |
 | selected    | boolean   |           | `false` | **Internal Prop**: will be set from the surrounded context `ContextMenu` or `SubMenu`. If set to `true` the css class `react-contextmenu-item--selected` will be added to associated element.                                                                         |
 | onMouseMove | Function  |           |         | **Internal Prop**: will be directly passed to associated element, so the surrounded context `ContextMenu` or `SubMenu` can handle the interactions to pass the correct `selected` state. Also the surrounded context can store the current selected `MenuItem`.    |
 | onMouseLeave | Function  |           |         | **Internal Prop**: will be directly passed to associated element, so the surrounded context `ContextMenu` or `SubMenu` can handle the interactions to pass the correct `selected` state. Also the surrounded context can store the current selected `MenuItem`.    |

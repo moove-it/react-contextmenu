@@ -32,7 +32,7 @@
 	cursor: pointer;
 }
 
-
+.react-contextmenu-item.react-contextmenu-item--active,
 .react-contextmenu-item.react-contextmenu-item--selected {
     color: #fff;
     background-color: #20a0ff;
@@ -77,7 +77,7 @@
     display: block;
 }
 
-.react-contextmenu-item--active{
+.react-contextmenu-item--tracked{
     position: absolute;
     font-size: 2em;
     margin-top: -12px;
