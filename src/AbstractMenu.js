@@ -14,8 +14,17 @@ export default class AbstractMenu extends Component {
         this.seletedItemRef = null;
         this.state = {
             selectedItem: null,
-            forceSubMenuOpen: false
+            forceSubMenuOpen: false,
+            activeItem: null
         };
+    }
+
+    setActiveItem = (activeItem) => {
+        this.setState({ activeItem });
+    }
+
+    checkActive = (index) => {
+        return this.state.activeItem === index;
     }
 
     handleKeyNavigation = (e) => {
@@ -130,10 +139,25 @@ export default class AbstractMenu extends Component {
         if (!child.props.divider && this.state.selectedItem === child) {
             // special props for selected item only
             props.selected = true;
+            props.setActiveItem = this.setActiveItem;
             props.ref = (ref) => { this.seletedItemRef = ref; };
             return React.cloneElement(child, props);
         }
+
+        if (child.props.defaultSelected) {
+            // on default selection
+            if (this.state.activeItem === null) {
+                props.isActive = true;
+            } else {
+                props.isActive = this.checkActive(child.props.index);
+            }
+
+            props.setActiveItem = this.setActiveItem;
+            return React.cloneElement(child, props);
+        }
+
         // onMouseMove is only needed for non selected items
+        props.isActive = this.checkActive(child.props.index);
         props.onMouseMove = () => this.onChildMouseMove(child);
         return React.cloneElement(child, props);
     });

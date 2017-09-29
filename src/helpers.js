@@ -15,11 +15,11 @@ export const cssClasses = {
     menuVisible: 'react-contextmenu--visible',
     menuWrapper: 'react-contextmenu-wrapper',
     menuItem: 'react-contextmenu-item',
-    menuItemActive: 'react-contextmenu-item--active',
     menuItemDisabled: 'react-contextmenu-item--disabled',
     menuItemDivider: 'react-contextmenu-item--divider',
     menuItemSelected: 'react-contextmenu-item--selected',
-    subMenu: 'react-contextmenu-submenu'
+    subMenu: 'react-contextmenu-submenu',
+    menuItemActive: 'react-contextmenu-item--active'
 };
 
 export const store = {};

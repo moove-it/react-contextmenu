@@ -31,10 +31,8 @@ export default class SimpleMenu extends Component {
                     {this.state.logs.map((log, i) => <p key={i}>{log}</p>)}
                 </div>
                 <ContextMenu id={MENU_TYPE}>
-                    <MenuItem onClick={this.handleClick} data={{ item: 'item 1' }}>Menu Item 1</MenuItem>
-                    <MenuItem onClick={this.handleClick} data={{ item: 'item 2' }}>Menu Item 2</MenuItem>
-                    <MenuItem divider />
-                    <MenuItem onClick={this.handleClick} data={{ item: 'item 3' }}>Menu Item 3</MenuItem>
+                    <MenuItem trackSelection defaultSelected index={1} onClick={this.handleClick} data={{ item: 'item 1' }}>Menu Item 1</MenuItem>
+                    <MenuItem trackSelection index={2} onClick={this.handleClick} data={{ item: 'item 2' }}>Menu Item 2</MenuItem>
                 </ContextMenu>
             </div>
         );
