@@ -52,7 +52,6 @@ export default class MenuItem extends Component {
         const { disabled, divider, onClick, data, preventClose, trackSelection } = this.props;
 
         if (disabled || divider) return;
-
         if (trackSelection) this.setItem();
 
         if (disabled || divider) return;

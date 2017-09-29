@@ -26,7 +26,7 @@ function App() {
                 <ul className='pure-menu-list'>
                     <li className='pure-menu-item'>
                         <Link {...commonProps} to='/simple-menu'>
-                            Simple Menu
+                            test Menu
                         </Link>
                     </li>
                     <li className='pure-menu-item'>
